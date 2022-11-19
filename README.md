@@ -19,7 +19,7 @@
 
 ##render-utils
 -export function renderAnimeCard(anime)
--add dic class list for anime card
+-add div class list for anime card
 -add text/image content and link
 -append and return
 
