@@ -1,27 +1,38 @@
-## The Golden Rule:
+![Wireframe](<./assets/Untitled%20(5).jpg>)
 
-🦸 🦸‍♂️ `Stop starting and start finishing.` 🏁
+##HTML
 
-If you work on more than one feature at a time, you are guaranteed to multiply your bugs and your anxiety.
+<header>
+-link supabase with key and url
+<main><section class="main-section"><h2>Anime Characters and Media</h2><div></div></section>
 
-## Making a plan
+##app.js
+-import fetch utils and render utils
+-on load, add if for for getting data, rendering, and appending it
 
-1. **Make a drawing of your app. Simple "wireframes"**
-1. **Look at the drawing and name the HTML elements you'll need to realize your vision**
-1. **Look at the drawing and imagine using the app. What _state_ do you need to track?**
-1. **For each HTML element ask: Why do I need this? (i.e., "we need div to display the results in")**
-1. **Once we know _why_ we need each element, think about how to implement the "Why" as a "How" (i.e., `resultsEl.textContent = newResults`)**
-1. **Find all the 'events' (user clicks, form submit, on load etc) in your app. Ask one by one, "What happens when" for each of these events. Does any state change? Does any DOM update?**
-1. **Think about how to validate each of your features according to a Definition of Done. (Hint: console.log usually helps here.)**
-1. **Consider what features _depend_ on what other features. Use this dependency logic to figure out what order to complete tasks.**
+##fetch-utils
+-link supabase url and key here
+-export async get Anime, await, and return all items
 
-Additional considerations:
+-   export async getAnime(id),await, and return response
+    -check error function
 
--   Ask: which of your HTML elements need to be hard coded, and which need to be dynamically generated?
--   Consider your data model.
-    -   What kinds of objects (i.e., Dogs, Friends, Todos, etc) will you need?
-    -   What are the key/value pairs?
-    -   What arrays might you need?
-    -   What needs to live in a persistence layer?
--   Is there some state we need to initialize?
--   Ask: should any of this work be abstracted into functions? (i.e., is the work complicated? can it be reused?)
+##render-utils
+-export function renderAnimeCard(anime)
+-add div class list for anime card
+-add text/image content and link
+-append and return
+
+-export function renderAnimeDetail(anime)
+-create const and tags as needed
+-create div class animeDetail
+-add classes as needed
+-template literal
+-append and return
+
+##detail js
+-import from fetch and render
+-call animeDetailContainer
+-async event listener on load
+-url search params
+-render and append
