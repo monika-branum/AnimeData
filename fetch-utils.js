@@ -5,7 +5,7 @@ const client = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
 export async function getCharacters() {
     const response = await client.from('Anime').select();
-    return response;
+    return response.data;
 }
 
 export async function getCharacter(id) {

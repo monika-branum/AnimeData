@@ -17,3 +17,13 @@ export function renderCharacterCard(Character) {
 
     return a;
 }
+
+export function renderDetailPage(item) {
+    const imgDisplay = document.createElement('img');
+    const characterNameDisplay = document.createElement('h1');
+    const animeTitleDisplay = document.createElement('h2');
+    const animeTypeDisplay = document.createElement('p');
+    const abilitiesDisplay = document.createElement('p');
+
+    imgDisplay.src = item.Image;
+}
